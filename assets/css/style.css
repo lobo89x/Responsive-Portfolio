@@ -216,6 +216,18 @@ input[type=submit] {
   border: 0 none;
 }
 
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  /* color: red; */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 860px;
+}
+
+.card {
+  width:95%;
+}
 
 @media screen and (max-width: 980px) {
     #masthead {
@@ -226,6 +238,9 @@ input[type=submit] {
       margin-top: 0px;
       margin-bottom: auto;
       margin-left: 20px;
+    }
+    .card-deck {
+      width: 560px;
     }
     nav{
       margin-left: 10px;
@@ -254,6 +269,9 @@ input[type=submit] {
       margin-bottom: 30px;
       margin-left: 20px;
       padding: 5px 20px 5px 20px;
+    }
+    .card-deck {
+      width: 430px;
     }
     #main-container {
       padding-top: 0px;
@@ -309,6 +327,9 @@ input[type=submit] {
       flex-direction: column;
       align-content: center;
       clear: both;
+    }
+    .card-deck {
+      width: 350px;
     }
 
     nav{
