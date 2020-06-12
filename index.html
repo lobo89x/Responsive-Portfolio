@@ -16,7 +16,8 @@
       <nav>
         <a href="index.html">About</a>
         <a href="portfolio.html">Portfolio</a>
-        <a href="assets/ALEX_LEE_III_FS0403.pdf" download>Current Resume</a>
+        <!-- <a href="assets/ALEX_LEE_III_FS0403.pdf" download>Current Resume</a> -->
+        <button type="button" id="resumeModalBtn" >Resume</button>
       </nav>  
     </div>
   </header>
@@ -36,6 +37,13 @@
     </section>
 
   </div>
+  <!-- this is the modal for the resume popout -->
+  <div id="resumeModal" class="modal">
+    <a  href="assets/ALEX_LEE_III_FS0403.pdf" download>PDF</a>
+    <span class="closeBtn">&otimes;</span>
+    <img class="modal-content" src="assets/Hnet.com-image.jpg" alt="" id="resumeImg">
+    <div id="caption"></div>
+  </div>
 
   <footer>
       <div class="container">
@@ -45,9 +53,31 @@
             <a href="https://www.linkedin.com/in/alexander-lee-3abb1546/">Find me on Linkedin </a>
             <a>| 770-714-6805 email: ahlee1026@gmail.com</a>
           </h5>
-          Copyright 2019 &copy;
+          Copyright 2020 &copy;
         </div>
       </footer>
 </body>
+<script>
+  // Get the modal
+  var modal = document.getElementById("resumeModal");
 
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  // var img = document.getElementById("myImg");
+  var img = document.getElementById("resumeModalBtn");
+  var modalImg = document.getElementById("resumeImg");
+  var captionText = document.getElementById("caption");
+  img.onclick = function(){
+    modal.style.display = "block";
+    // modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("closeBtn")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+</script>
 </html>
